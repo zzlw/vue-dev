@@ -4,7 +4,7 @@ Vue@3.x.x 脚手架
 ## 开发环境
 > 遵循语义化版本，[必须使用 yarn](https://yarnpkg.com/en/docs/yarn-lock)
 
-> *[vue-cli@3.0.0 中文文档](https://github.com/vuejs/vue-docs-zh-cn/blob/master/vue-cli/README.md)*
+> [vue-cli@3.0.0 中文文档](https://github.com/vuejs/vue-docs-zh-cn/blob/master/vue-cli/README.md)*
 
 ```shell
 node ^10.4.0
