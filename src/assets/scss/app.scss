@@ -1,0 +1,126 @@
+@import "./_layout.scss";
+@import "./_color.scss";
+@import "./_font.scss";
+@import "./_border.scss";
+@import "./_button.scss";
+// 全局盒子模型设置
+*, *:before, *:after {
+  box-sizing: border-box;
+  /* 在X5新内核Blink中，在排版页面的时候，会主动对字体进行放大，会检测页面中的主字体，当某一块字体在我们的判定规则中，认为字号较小，并且是页面中的主要字体，就会采取主动放大的操作。然而这不是我们想要的，可以采取给最大高度解决 */
+  max-height: 90000000px;
+}
+
+@each $size in (30,50,60,70,80,90,100,110,120,150,160,200,400) {
+  .img-#{$size}{width:#{$size}px!important;height:#{$size}px!important;}
+}
+
+input::placeholder {
+  color: #999;
+}
+input:focus,
+button:focus{
+    outline: none;
+}
+.back{
+    @extend .bg-alpha;
+    position: absolute;
+    left:20px;
+    top:20px;
+    padding:10px;
+}
+img{
+    @extend .block;
+    max-width: 100%;
+}
+[class^="vip-label"], [class*=" vip-label"]{
+    display: block;
+    position: relative;
+    background:#414141;
+    color:#eee386;
+    padding: 0 10px;
+    line-height: 120%;
+    &:after{
+        display: block;
+        position: absolute;
+        content:'';
+        border:10px solid #303030;
+    }
+}
+.vip-label-rb:after{
+    bottom:0;
+    right:-10px;
+    border-color:transparent transparent #303030 #303030;
+}
+.vip-label-lt:after{
+    top:0;
+    left:-10px;
+    border-color:#303030 #303030 transparent transparent;
+}
+.vip-badge{
+    @extend .overflow-hidden;
+    @extend .relative;
+}
+.vip-badge:before{
+    display: block;
+    content:'会员';
+    position: absolute;
+    top:-10px;
+    left:-56px;
+    color:#fff;
+    font-size:18px;
+    line-height: 1;
+    background: linear-gradient(to right,#f9743b,#f55530);
+    padding:25px 50px 5px;
+    transform: rotate(-45deg);
+}
+[class^="price-label"], [class*=" price-label"]{
+    position: relative;
+    border:1px solid #e8412b;
+    &:before{
+        display: block;
+        content:'';
+        position: absolute;
+        width:10px;
+        height:10px;
+        border:1px solid #e8412b;
+        background-color: #fff;
+    }
+}
+.price-label-lc:before{
+    top:50%;
+    left:-5px;
+    border-width:0 0 1px 1px;
+    transform: translateY(-50%) rotate(45deg);
+}
+.price-label-lt:before{
+    top:0px;
+    left:35px;
+    border-width:1px 0 0 1px;
+    transform: translateY(-50%) rotate(45deg);
+}
+.nav-active{
+    @extend .relative;
+    &:after{
+        display: block;
+        content:'';
+        position: absolute;
+        bottom:0;
+        left:50%;
+        width:60px;
+        background-color: $color3;
+        height:10px;
+        transform: translateX(-50%);
+    }
+}
+[class^="box-shadow"], [class*=" box-shadow"]{
+    box-shadow: rgba(0,0,0,.2) 0 0 10px;
+}
+
+
+.transform-center{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+

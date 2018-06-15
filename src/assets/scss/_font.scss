@@ -1,0 +1,24 @@
+html{
+    font-size:32px;
+}
+@for $i from 8 through 36{
+    .size#{$i*2}{font-size:#{$i*2}px!important;}
+}
+.size80{
+    font-size:80px;
+}
+.bold {
+    font-weight: bold;
+}
+.del{
+    text-decoration: line-through;
+}
+.underline{
+    text-decoration: underline;
+}
+.underline-none{
+    text-decoration: none;
+}
+.letter-spacing{
+    letter-spacing: 4px;
+}

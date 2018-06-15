@@ -1,0 +1,35 @@
+@for $i from 0 through 10{
+    .border-radius#{$i*5}{border-radius:#{$i*5}px!important;}
+}
+.nbr{
+    border:none!important;
+}
+.border,
+.border-b{
+    border-bottom:1px solid #eee;
+}
+.border,
+.border-t{
+    border-top:1px solid #eee;
+}
+.border,
+.border-l{
+    border-left:1px solid #eee;
+}
+.border,
+.border-r{
+    border-right:1px solid #eee;
+}
+.border-radius{
+    border-radius:50%;
+}
+
+
+.border-l-s-d{
+    border-left-style: dashed;
+}
+.border-r-s-d{
+    border-right-style: dashed;
+}
+
+
